@@ -33,7 +33,7 @@ jobs:
                 repo: context.repo.repo,
                 tag_name: process.env.RELEASE_TAG,
               });
-              console.log(res.data);
+              console.log(res.data.upload_url);
               return res.data.upload_url;
             } catch (error) {
               core.setFailed(error.message);
