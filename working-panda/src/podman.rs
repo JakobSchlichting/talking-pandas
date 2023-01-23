@@ -6,7 +6,7 @@ pub struct Podman {
 
 impl Podman {
     pub fn new(registry_url: &str) -> Podman {
-        return Podman { registry_url: String::from_str(registry_url).expect("") };
+         Podman { registry_url: String::from_str(registry_url).expect("") }
     }
 
     pub fn build(&mut self, path: &Path, tag: &String) -> Result<Output, Error> {
