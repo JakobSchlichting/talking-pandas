@@ -34,7 +34,7 @@ fn obtain_info_from_args(args: &Vec<String>) -> Result<(Box<Path>, String), &str
     let tag = path.file_name().unwrap().to_str().unwrap().split('.').last();
 
     match tag {
-        None => return Err("Failed to extract tag from file name"),
-        Some(t) => return Ok((path.into(), t.into())),
+        None =>  Err("Failed to extract tag from file name"),
+        Some(t) =>  Ok((path.into(), t.into())),
     }
 }
