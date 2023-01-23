@@ -19,7 +19,7 @@ jobs:
       - name: create-tag
         run: "echo \"RELEASE_TAG=$(date +%Y-%m-%d-%H-%M-%S)\" >> $GITHUB_ENV"
       - name: "create-release"
-        uses: "actions/github-script@v5"
+        uses: "actions/github-script@v6"
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |
